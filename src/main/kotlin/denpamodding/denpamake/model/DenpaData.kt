@@ -24,7 +24,6 @@ class DenpaData(val file: File) : Modifiable {
         memberCollection = DenpaMemberCollection(source)
         box = DenpaBox(source)
 
-        dirtyProperty.bind(memberCollection.dirtyProperty)
         dirtyProperty.bind(memberCollection.dirtyProperty
             .or(box.dirtyProperty)
         )

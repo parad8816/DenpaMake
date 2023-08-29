@@ -51,12 +51,11 @@ class DenpaBox(source: ByteBuffer) : Modifiable {
             val property = Property(it)
             property
         }
-
-        buffer.position(0)
     }
 
     fun updateData() {
         if (isDirty) {
+            buffer.position(0)
             val count = roomCount * 2
             buffer.put(count.toByte())
 
@@ -67,7 +66,6 @@ class DenpaBox(source: ByteBuffer) : Modifiable {
             }
 
             isDirty = false
-            buffer.position(0)
         }
     }
 }
