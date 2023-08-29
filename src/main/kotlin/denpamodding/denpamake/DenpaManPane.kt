@@ -405,12 +405,12 @@ class DenpaManPane(private val tracker: ModificationTracker<DenpaMember?>, priva
 
                         children += VBox().apply {
                             children += Label("柄")
-                            children += ComboBox<DenpaDesign.PatternType>().apply {
-                                items.addAll(DenpaDesign.PatternType.values())
+                            children += ComboBox<DenpaPattern>().apply {
+                                items.addAll(DenpaPattern.values())
 
                                 val listCellSupplier = {
-                                    object : ListCell<DenpaDesign.PatternType>() {
-                                        override fun updateItem(item: DenpaDesign.PatternType?, empty: Boolean) {
+                                    object : ListCell<DenpaPattern>() {
+                                        override fun updateItem(item: DenpaPattern?, empty: Boolean) {
                                             super.updateItem(item, empty)
                                             this.text = item?.text ?: ""
                                         }

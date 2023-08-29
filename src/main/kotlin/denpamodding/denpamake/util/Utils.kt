@@ -12,7 +12,7 @@ fun notImplementedAlert(): Alert {
     return Alert(Alert.AlertType.INFORMATION).apply {
         headerText = "未実装です"
         contentText = "申し訳ありませんが、この機能はまだ実装されていません。\n" +
-                "新しいバージョンをチェックして下さい。"
+                "次回バージョンのリリースをお待ちください。"
     }
 }
 

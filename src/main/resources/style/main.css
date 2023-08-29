@@ -27,3 +27,13 @@
 .combo-box:disabled .list-cell {
     -fx-opacity: 1;
 }
+
+.hyperlink {
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-text-fill: #c9653a;
+}
+
+.hyperlink:visited {
+    -fx-text-fill: #63afe5;
+}

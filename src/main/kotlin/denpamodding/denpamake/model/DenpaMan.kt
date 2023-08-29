@@ -6,10 +6,6 @@ import java.time.Duration
 import java.time.LocalDateTime
 
 class DenpaMan(override val id: Int, override var type: DenpaMemberType?) : DenpaMember() {
-    companion object {
-        const val MAIN_ACTOR_PERSONALITY: Byte = 0x32
-    }
-
     override var date: LocalDateTime = DATE_TIME_FROM
 
     override var name: String = ""
@@ -98,7 +94,7 @@ class DenpaMan(override val id: Int, override var type: DenpaMemberType?) : Denp
 
             buffer.getShort()
 
-            design.pattern = DenpaDesign.PatternType.of(buffer.get())
+            design.pattern = DenpaPattern.of(buffer.get())
             design.primaryColor = DenpaColor.of(buffer.get())
             design.secondaryColor = DenpaColor.of(buffer.get())
             design.skinColor = buffer.get()

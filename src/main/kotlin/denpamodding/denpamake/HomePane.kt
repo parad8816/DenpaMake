@@ -2,13 +2,13 @@ package denpamodding.denpamake
 
 import denpamodding.denpamake.model.DenpaData
 import denpamodding.denpamake.util.exceptionAlert
+import javafx.application.Application
 import javafx.beans.property.ObjectProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.scene.Scene
 import javafx.scene.control.*
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.HBox
-import javafx.scene.layout.Pane
 import javafx.scene.layout.VBox
 import javafx.stage.FileChooser
 import javafx.stage.FileChooser.ExtensionFilter
@@ -16,7 +16,7 @@ import javafx.stage.Modality
 import javafx.stage.Stage
 import java.io.File
 
-class HomePane(private val stage: Stage) : BorderPane() {
+class HomePane(private val app: Application, private val stage: Stage) : BorderPane() {
     private val title = DenpaMakeTitle()
     private val dataProperty: ObjectProperty<DenpaData?> = SimpleObjectProperty(null)
     private val fileProperty: ObjectProperty<File?> = SimpleObjectProperty(null)
@@ -30,7 +30,7 @@ class HomePane(private val stage: Stage) : BorderPane() {
             updateTitle()
 
             if (newValue == null) {
-                center = Pane()
+                center = NoDataPane()
             }
             else {
                 try {
@@ -212,6 +212,12 @@ class HomePane(private val stage: Stage) : BorderPane() {
 
             children += MenuBar().apply {
                 menus += Menu("ヘルプ").apply {
+                    items += MenuItem("問題を報告").apply {
+                        setOnAction {
+                            app.hostServices.showDocument("${DenpaMake.GITHUB}/issues")
+                        }
+                    }
+
                     items += MenuItem("このアプリについて").apply {
                         setOnAction {
                             showAboutStage()
@@ -220,12 +226,15 @@ class HomePane(private val stage: Stage) : BorderPane() {
                 }
             }
         }
+
+        center = NoDataPane()
     }
 
     private fun showAboutStage() {
         val stage = Stage()
-        val scene = Scene(AboutPane(stage), 400.0, 300.0)
+        val scene = Scene(AboutPane(app), 400.0, 350.0)
         scene.stylesheets += "style/main.css"
+        stage.title = "このアプリについて"
         stage.scene = scene
         stage.isResizable = false
         stage.initModality(Modality.APPLICATION_MODAL)
