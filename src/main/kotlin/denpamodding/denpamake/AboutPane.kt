@@ -1,6 +1,5 @@
 package denpamodding.denpamake
 
-import javafx.application.Application
 import javafx.geometry.Orientation
 import javafx.scene.control.Hyperlink
 import javafx.scene.control.Label
@@ -10,7 +9,7 @@ import javafx.scene.layout.BorderPane
 import javafx.scene.layout.HBox
 import javafx.scene.layout.VBox
 
-class AboutPane(app: Application) : BorderPane() {
+class AboutPane(app: DenpaMake) : BorderPane() {
     init {
         stylesheets += "style/about.css"
 
@@ -58,7 +57,7 @@ class AboutPane(app: Application) : BorderPane() {
             children += HBox().apply {
                 children += Label("- ")
 
-                children += Hyperlink("ソースコードを見る").apply {
+                children += Hyperlink("ソースコード").apply {
                     setOnAction {
                         app.hostServices.showDocument(DenpaMake.GITHUB)
                     }

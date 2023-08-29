@@ -2,7 +2,6 @@ package denpamodding.denpamake
 
 import denpamodding.denpamake.model.DenpaData
 import denpamodding.denpamake.util.exceptionAlert
-import javafx.application.Application
 import javafx.beans.property.ObjectProperty
 import javafx.beans.property.SimpleObjectProperty
 import javafx.scene.Scene
@@ -16,7 +15,7 @@ import javafx.stage.Modality
 import javafx.stage.Stage
 import java.io.File
 
-class HomePane(private val app: Application, private val stage: Stage) : BorderPane() {
+class HomePane(private val app: DenpaMake, private val stage: Stage) : BorderPane() {
     private val title = DenpaMakeTitle()
     private val dataProperty: ObjectProperty<DenpaData?> = SimpleObjectProperty(null)
     private val fileProperty: ObjectProperty<File?> = SimpleObjectProperty(null)
@@ -233,12 +232,12 @@ class HomePane(private val app: Application, private val stage: Stage) : BorderP
     private fun showAboutStage() {
         val stage = Stage()
         val scene = Scene(AboutPane(app), 400.0, 350.0)
-        scene.stylesheets += "style/main.css"
         stage.title = "このアプリについて"
         stage.scene = scene
         stage.isResizable = false
         stage.initModality(Modality.APPLICATION_MODAL)
         stage.show()
+        app.addBaseStyle(scene)
     }
 
     private fun updateTitle() {
