@@ -1,6 +1,6 @@
 package denpamodding.denpamake.model
 
-class DenpaFruit {
+class DenpaFruitEffect {
     var hp: Byte = 0
     var ap: Byte = 0
     var attack: Byte = 0

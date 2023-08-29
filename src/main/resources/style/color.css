@@ -1,0 +1,157 @@
+.color-sample {
+    -fx-stroke: #000000;
+    -fx-stroke-width: 1px;
+}
+
+.none {
+    -fx-fill: transparent;
+    -fx-stroke-dash-array: 2px;
+}
+
+.aura {
+    -fx-fill: linear-gradient(from 0% 100% to 0% 0%, #f283ff, #b3ffe3);
+}
+
+.black {
+    -fx-fill: #343434;
+}
+
+.black-pale {
+    -fx-fill: #6c6c6c;
+}
+
+.black-deep {
+    -fx-fill: #101010;
+}
+
+.red {
+    -fx-fill: #ff5a5a;
+}
+
+.red-pale {
+    -fx-fill: #ff8e8e;
+}
+
+.red-deep {
+    -fx-fill: #ec3d3d;
+}
+
+.lightblue {
+    -fx-fill: #87e8fc;
+}
+
+.lightblue-pale {
+    -fx-fill: #c1efff;
+}
+
+.lightblue-deep {
+    -fx-fill: #5bb2c7;
+}
+
+.green {
+    -fx-fill: #70fc76;
+}
+
+.green-deep {
+    -fx-fill: #37853a;
+}
+
+.green-pale {
+    -fx-fill: #c1ffc4;
+}
+
+.orange {
+    -fx-fill: #f18d3b
+}
+
+.orange-deep {
+    -fx-fill: #a2561b
+}
+
+.orange-pale {
+    -fx-fill: #ecad7c
+}
+
+.yellow {
+    -fx-fill: #f1d43b;
+}
+
+.yellow-deep {
+    -fx-fill: #a18e21;
+}
+
+.yellow-pale {
+    -fx-fill: #f5e38d;
+}
+
+.blue {
+    -fx-fill: #4059fc;
+}
+
+.blue-deep {
+    -fx-fill: #243693;
+}
+
+.blue-pale {
+    -fx-fill: #7b87e5;
+}
+
+.white {
+    -fx-fill: #f5eedf;
+}
+
+.white-deep {
+    -fx-fill: #e8e9fd;
+}
+
+.white-pale {
+    -fx-fill: #ffffff;
+}
+
+.purple {
+    -fx-fill: #9d3bf6;
+}
+
+.purple-deep {
+    -fx-fill: #571d7e;
+}
+
+.purple-pale {
+    -fx-fill: #b68edc;
+}
+
+.pink {
+    -fx-fill: #ee7dde;
+}
+
+.pink-deep {
+    -fx-fill: #c04fb0;
+}
+
+.pink-pale {
+    -fx-fill: #f5beeb;
+}
+
+.gold {
+    -fx-fill: #bd994d;
+}
+
+.gold-deep {
+    -fx-fill: #7a6530;
+}
+
+.gold-pale {
+    -fx-fill: #cbb17c;
+}
+
+.silver {
+    -fx-fill: #929296;
+}
+
+.silver-deep {
+    -fx-fill: #707079;
+}
+
+.silver-pale {
+    -fx-fill: #b8b8c4;
+}

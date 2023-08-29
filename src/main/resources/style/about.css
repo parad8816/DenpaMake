@@ -1,0 +1,15 @@
+.body {
+    -fx-padding: 10px;
+    -fx-spacing: 5px;
+}
+
+.text-header {
+    -fx-font-size: 2em;
+    -fx-font-weight: bold;
+}
+
+.left-container {
+    -fx-alignment: center;
+    -fx-padding: 10px;
+    -fx-spacing: 15px;
+}

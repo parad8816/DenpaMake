@@ -2,19 +2,21 @@ package denpamodding.denpamake
 
 import javafx.application.Application
 import javafx.scene.Scene
-import javafx.scene.layout.Pane
 import javafx.stage.Stage
 
-class HelloApplication : Application() {
-    override fun start(stage: Stage) {
-        val pane = Pane()
-        val scene = Scene(pane, 320.0, 240.0)
-        stage.title = "Hello!"
-        stage.scene = scene
-        stage.show()
+class DenpaMake : Application() {
+    companion object {
+        val VERSION: Version = Version(1, 0, 0)
+    }
+
+    override fun start(primaryStage: Stage) {
+        val scene = Scene(HomePane(primaryStage), 1030.0, 560.0)
+        scene.stylesheets += "style/main.css"
+        primaryStage.scene = scene
+        primaryStage.show()
     }
 }
 
 fun main() {
-    Application.launch(HelloApplication::class.java)
+    Application.launch(DenpaMake::class.java)
 }

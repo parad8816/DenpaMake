@@ -1,0 +1,10 @@
+.header {
+    -fx-background-color: #ffffff;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-style: solid;
+    -fx-border-color: #d0d0d0;
+}
+
+.header .menu-bar {
+    -fx-background-color: transparent;
+}

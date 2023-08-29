@@ -1,0 +1,44 @@
+.memo-text-area {
+    -fx-max-width: 150px;
+    -fx-max-height: 60px;
+}
+
+.fruit-grid-container {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-border-width: 1px 0 0 0;
+    -fx-border-style: solid;
+    -fx-border-color: #d0d0d0;
+}
+
+.fruit-grid {
+    -fx-alignment: center;
+    -fx-vgap: 0px;
+    -fx-hgap: 10px;
+}
+
+.bottom-align-top {
+    -fx-alignment: top-left;
+}
+
+.open-button {
+    -fx-min-width: 125px;
+    -fx-alignment: center-left;
+}
+
+.open-button-text-container {
+    -fx-alignment: center-left;
+}
+
+.open-button-image-container {
+    -fx-alignment: center-right;
+}
+
+.color-list-cell-container {
+    -fx-alignment: center-left;
+    -fx-spacing: 5px;
+}
+
+.color-list-cell-container .label {
+    -fx-text-fill: #000000;
+}

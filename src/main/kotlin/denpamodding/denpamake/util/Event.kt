@@ -1,4 +1,4 @@
-package tonals.uehara.talk.util
+package denpamodding.denpamake.util
 
 class Event<T> {
     private val observers: MutableSet<(T) -> Unit> = mutableSetOf()

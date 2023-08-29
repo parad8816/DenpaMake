@@ -1,0 +1,29 @@
+.mid-spinner {
+    -fx-max-width: 100px;
+}
+
+.short-spinner {
+    -fx-max-width: 75px;
+}
+
+.very-short-spinner {
+    -fx-max-width: 50px;
+}
+
+.tooltip {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-font-size: 1.2em;
+    -fx-text-fill: #181818;
+    -fx-border-width: 1px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 0;
+}
+
+.combo-box:disabled {
+    -fx-opacity: 0.3;
+}
+
+.combo-box:disabled .list-cell {
+    -fx-opacity: 1;
+}

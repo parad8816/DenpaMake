@@ -1,0 +1,5 @@
+.body {
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}

@@ -1,0 +1,104 @@
+.header-data {
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-style: solid;
+    -fx-border-color: #d0d0d0;
+}
+
+.header-segment-container {
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.header-category-container {
+    -fx-alignment: center;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.left-button-container {
+    -fx-alignment: center;
+    -fx-padding: 10px;
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-style: solid;
+    -fx-border-color: #d0d0d0;
+}
+
+.right-button-container {
+    -fx-alignment: center;
+    -fx-padding: 10px;
+    -fx-border-width: 0 0 0 1px;
+    -fx-border-style: solid;
+    -fx-border-color: #d0d0d0;
+}
+
+.footer {
+    -fx-border-width: 1px 0 0 0;
+    -fx-border-style: solid;
+    -fx-border-color: #d0d0d0;
+}
+
+.footer-location-container {
+    -fx-padding: 5px 10px 5px 10px;
+}
+
+.footer-tips-container {
+    -fx-padding: 5px 10px 5px 10px;
+}
+
+.footer-text-warn {
+    -fx-text-fill: #e76565;
+}
+
+.move-button {
+    -fx-min-height: 160px;
+    -fx-background-color: #c0c0c0;
+    -fx-background-radius: 0;
+}
+
+.move-button:hover {
+    -fx-background-color: #adadad;
+}
+
+.index-container {
+    -fx-alignment: center-right;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.box-list-view-container {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-border-width: 0 0 0 1px;
+    -fx-border-style: solid;
+    -fx-border-color: #d0d0d0;
+}
+
+.box-list-view {
+    -fx-max-width: 164px;
+    -fx-max-height: 358px;
+}
+
+.box-list-cell-name-container {
+    -fx-alignment: center-left;
+    -fx-padding: 2px;
+}
+
+.box-list-cell-button {
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-alignment: center;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-background-image: url("../image/modify.png");
+    -fx-padding: 0;
+}
+
+.box-list-cell-button:hover {
+    -fx-background-image: url("../image/modify-hover.png");
+}
+
+.box-list-spinner {
+    -fx-max-width: 164px;
+}

@@ -1,0 +1,38 @@
+.left-border {
+    -fx-border-width: 0 0 0 1px;
+    -fx-border-style: dashed;
+    -fx-border-color: #d0d0d0;
+}
+
+.right-border {
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-style: dashed;
+    -fx-border-color: #d0d0d0;
+}
+
+.bottom-border {
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-style: dashed;
+    -fx-border-color: #d0d0d0;
+}
+
+.container-left {
+    -fx-alignment: top-left;
+}
+
+.container {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.sequence {
+    -fx-spacing: 10px;
+}
+
+.mid-text-field {
+    -fx-max-width: 150px;
+}
+
+.mid-combo-box {
+    -fx-max-width: 150px;
+}

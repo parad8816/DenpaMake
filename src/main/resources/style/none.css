@@ -1,0 +1,9 @@
+.body {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+.none-text {
+    -fx-font-size: 1.6em;
+    -fx-text-fill: #a8a8a8;
+}
