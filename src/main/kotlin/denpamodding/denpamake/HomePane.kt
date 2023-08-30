@@ -231,13 +231,14 @@ class HomePane(private val app: DenpaMake, private val stage: Stage) : BorderPan
 
     private fun showAboutStage() {
         val stage = Stage()
-        val scene = Scene(AboutPane(app), 400.0, 350.0)
+        val scene = Scene(AboutPane(app), 400.0, 380.0)
+        app.addBaseStyle(scene)
+        app.setIcons(stage)
         stage.title = "このアプリについて"
         stage.scene = scene
         stage.isResizable = false
         stage.initModality(Modality.APPLICATION_MODAL)
         stage.show()
-        app.addBaseStyle(scene)
     }
 
     private fun updateTitle() {

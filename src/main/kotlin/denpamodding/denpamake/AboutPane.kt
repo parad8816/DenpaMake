@@ -54,12 +54,24 @@ class AboutPane(app: DenpaMake) : BorderPane() {
             }
 
             children += Separator(Orientation.HORIZONTAL)
-            children += HBox().apply {
-                children += Label("- ")
+            children += VBox().apply {
+                children += HBox().apply {
+                    children += Label("- ")
 
-                children += Hyperlink("ソースコード").apply {
-                    setOnAction {
-                        app.hostServices.showDocument(DenpaMake.GITHUB)
+                    children += Hyperlink("ソースコード").apply {
+                        setOnAction {
+                            app.hostServices.showDocument(DenpaMake.GITHUB)
+                        }
+                    }
+                }
+
+                children += HBox().apply {
+                    children += Label("- ")
+
+                    children += Hyperlink("ライセンス (MIT License)").apply {
+                        setOnAction {
+                            app.hostServices.showDocument("https://github.com/parad8816/DenpaMake/blob/master/LICENSE")
+                        }
                     }
                 }
             }

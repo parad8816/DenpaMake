@@ -266,7 +266,7 @@ class DenpaDataPane(data: DenpaData) : BorderPane() {
                                                             stylesheets += "style/rename.css"
                                                             styleClass += "body"
 
-                                                            children += Label("部屋の名前：")
+                                                            children += Label("部屋の名前: ")
                                                             children += LimitedTextField(roomNameProp.value, 12).apply {
                                                                 setOnAction {
                                                                     val newText = this.text

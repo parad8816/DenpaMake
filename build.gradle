@@ -5,6 +5,7 @@ plugins {
   id 'org.javamodularity.moduleplugin' version '1.8.12'
   id 'org.openjfx.javafxplugin' version '0.0.13'
   id 'org.beryx.jlink' version '2.25.0'
+  id 'com.github.johnrengelman.shadow' version '7.1.0'
 }
 
 group 'denpamodding'
@@ -25,7 +26,7 @@ tasks.withType(JavaCompile) {
 
 application {
   mainModule = 'denpamodding.denpamake'
-  mainClass = 'denpamodding.denpamake.HelloApplication'
+  mainClass = 'denpamodding.denpamake.Main'
 }
 kotlin {
   jvmToolchain( 17 )
@@ -38,13 +39,11 @@ javafx {
 
 dependencies {
   implementation('org.controlsfx:controlsfx:11.1.2')
+  implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10')
 
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
-
-test {
-useJUnitPlatform()}
 
 jlink {
   imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
@@ -56,4 +55,10 @@ jlink {
 
 jlinkZip {
   group = 'distribution'
+}
+
+shadowJar {
+  manifest {
+    attributes "Main-Class": "denpamodding.denpamake.Main"
+  }
 }

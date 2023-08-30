@@ -13,17 +13,17 @@ class DenpaMake : Application() {
 
     override fun start(primaryStage: Stage) {
         val scene = Scene(HomePane(this, primaryStage), 1030.0, 560.0)
+        addBaseStyle(scene)
+        setIcons(primaryStage)
         primaryStage.scene = scene
         primaryStage.show()
-        addBaseStyle(scene)
+    }
+
+    fun setIcons(stage: Stage) {
+        stage.icons.setAll(appIcons)
     }
 
     fun addBaseStyle(scene: Scene) {
-        (scene.window as? Stage?)?.icons?.setAll(appIcons)
         scene.stylesheets += "style/main.css"
     }
-}
-
-fun main() {
-    Application.launch(DenpaMake::class.java)
 }
