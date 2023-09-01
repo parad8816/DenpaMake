@@ -8,7 +8,7 @@ plugins {
   id 'com.github.johnrengelman.shadow' version '7.1.0'
 }
 
-group 'denpamodding'
+group 'tonals'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -25,8 +25,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-  mainModule = 'denpamodding.denpamake'
-  mainClass = 'denpamodding.denpamake.Main'
+  mainModule = 'tonals.denpamake'
+  mainClass = 'tonals.denpamake.Main'
 }
 kotlin {
   jvmToolchain( 17 )
@@ -59,6 +59,6 @@ jlinkZip {
 
 shadowJar {
   manifest {
-    attributes "Main-Class": "denpamodding.denpamake.Main"
+    attributes "Main-Class": "tonals.denpamake.Main"
   }
 }
